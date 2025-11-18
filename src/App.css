@@ -1,0 +1,9 @@
+@import 'tw-animate-css';
+@import 'tailwindcss';
+@custom-variant dark (&: is(.dark *));
+
+@tailwind utilities;
+
+#root {
+  margin: 0 auto;
+}
