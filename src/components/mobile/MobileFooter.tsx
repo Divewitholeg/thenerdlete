@@ -1,56 +1,137 @@
-{
-  /* Footer */
-}
+import { Separator } from '@/components/ui/separator';
+import {
+  SiGithub,
+  SiLinkedin,
+  SiGmail,
+  SiLinphone,
+  SiWhatsapp,
+} from 'react-icons/si';
 
 export default function MobileFooter() {
   return (
-    <footer className="bottom-0 z-10 bg-background border-t">
-      <div className="container mx-auto px-4 py-3">
-        <nav className="flex justify-around items-center">
-          <button className="flex flex-col items-center p-2 rounded-md hover:bg-accent">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            <span className="text-xs mt-1">Home</span>
-          </button>
+    <footer
+      id="site-footer"
+      className="w-full bg-background border-t p-4 text-center space-y-6"
+      role="contentinfo"
+      aria-label="Website footer with contact information and social links"
+      itemScope
+      itemType="https://schema.org/WPFooter"
+    >
+      {/* Contact Section */}
+      <section
+        id="footer-contact"
+        className="grid grid-cols-3 gap-4 items-start justify-center text-center"
+        aria-label="Contact information"
+        itemScope
+        itemType="https://schema.org/Person"
+      >
+        <meta itemProp="name" content="Oleg Rõbnikov Web Development" />
 
-          <button className="flex flex-col items-center p-2 rounded-md hover:bg-accent">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-            </svg>
-            <span className="text-xs mt-1">Explore</span>
-          </button>
+        {/* Email */}
+        <div
+          className="flex flex-col items-center space-y-1"
+          aria-label="Email address"
+        >
+          <SiGmail className="h-5 w-5" aria-hidden="true" />
+          <a
+            href="mailto:rybniko@gmail.com"
+            className="text-sm hover:underline"
+            aria-label="Send email to Oleg Rõbnikov Web Development"
+            itemProp="email"
+          >
+            Email
+          </a>
+        </div>
 
-          <button className="flex flex-col items-center p-2 rounded-md hover:bg-accent">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-            </svg>
-            <span className="text-xs mt-1">Profile</span>
-          </button>
-        </nav>
-      </div>
+        {/* Separator */}
+        <Separator
+          orientation="vertical"
+          className="mx-auto h-10 hidden sm:block"
+        />
+
+        {/* Phone */}
+        <div
+          className="flex flex-col items-center space-y-1"
+          aria-label="Phone number"
+        >
+          <SiLinphone className="h-5 w-5" aria-hidden="true" />
+          <a
+            href="tel:+84357540438"
+            className="text-sm hover:underline"
+            aria-label="Call Oleg Rõbnikov Web Development"
+            itemProp="telephone"
+          >
+            Phone
+          </a>
+        </div>
+
+        {/* Separator (hidden on mobile) */}
+        <Separator
+          orientation="vertical"
+          className="mx-auto h-10 hidden sm:block"
+        />
+
+        {/* WhatsApp */}
+        <div
+          className="flex flex-col items-center space-y-1"
+          aria-label="WhatsApp contact"
+        >
+          <SiWhatsapp className="h-5 w-5" aria-hidden="true" />
+          <a
+            href="https://wa.me/37256045484"
+            className="text-sm hover:underline"
+            aria-label="Chat with Oleg Rõbnikov Web Development on WhatsApp"
+            itemProp="telephone"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* Horizontal Separator */}
+      <Separator className="w-full" />
+
+      {/* Social Section */}
+      <nav
+        id="footer-social"
+        className="flex items-center justify-center space-x-6"
+        aria-label="Social media links"
+        itemScope
+        itemType="https://schema.org/Person"
+      >
+        <a
+          href="https://github.com/Divewitholeg"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Oleg's GitHub profile"
+          className="hover:opacity-75"
+          itemProp="sameAs"
+        >
+          <SiGithub className="h-6 w-6" aria-hidden="true" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/company/93233054/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Oleg Rõbnikov Web Development's LinkedIn business page"
+          className="hover:opacity-75"
+          itemProp="sameAs"
+        >
+          <SiLinkedin className="h-6 w-6" aria-hidden="true" />
+        </a>
+      </nav>
+
+      {/* Copyright */}
+      <p
+        className="text-xs text-muted-foreground"
+        aria-label="Copyright notice"
+        id="footer-copyright"
+        itemProp="copyrightYear"
+      >
+        © {new Date().getFullYear()} Oleg Rõbnikov Web Development. All rights
+        reserved.
+      </p>
     </footer>
   );
 }
