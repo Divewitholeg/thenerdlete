@@ -20,5 +20,10 @@ export default defineConfig({
   },
   build: {
     license: true,
+    sourcemap: true,
+    outDir: 'dist',
+  },
+  server: {
+    port: 3000,
   },
 });
