@@ -2,7 +2,7 @@
   /* MobileHeader.tsx */
 }
 
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function MobileHeader() {
   return (

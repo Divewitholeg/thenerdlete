@@ -1,5 +1,5 @@
 {
-  /* Main Content - Scrolls with header and footer */
+  /* Main Content for Tablet - Enhanced layout for larger screens */
 }
 import { BadgedLink } from '@/components/BadgedLink';
 import {
@@ -21,9 +21,9 @@ import {
   SiVite,
 } from 'react-icons/si';
 
-export default function MobileBody() {
+export default function TabletBody() {
   return (
-    <main className="flex-1 overflow-auto mb-4">
+    <main className="flex-1 overflow-auto mb-6">
       <Card
         className="mx-auto"
         itemScope
@@ -34,17 +34,17 @@ export default function MobileBody() {
         id="tech-stack-article"
         lang="en"
       >
-        <CardHeader>
+        <CardHeader className="pb-4">
           <CardTitle
             id="tech-stack-heading"
-            className="sr-only"
+            className="text-2xl text-center mb-2"
             itemProp="headline"
           >
             Technology Stack Benefits
           </CardTitle>
           <CardDescription
             id="tech-stack-description"
-            className="sr-only"
+            className="text-lg text-center text-muted-foreground"
             itemProp="abstract"
           >
             Overview of modern web technologies used by Oleg Rõbnikov Web
@@ -57,9 +57,9 @@ export default function MobileBody() {
           itemScope
           itemType="https://schema.org/Text"
           itemProp="articleBody"
-          className="[&>p]:mb-4 leading-7"
+          className="[&>p]:mb-6 leading-8 text-lg space-y-6"
         >
-          <p>
+          <p className="text-pretty">
             Your website will be a powerful growth engine, built with a modern
             tech stack chosen specifically for your success.
             <BadgedLink
@@ -68,18 +68,20 @@ export default function MobileBody() {
               label="React"
               itemProp="mentions"
               iconColor="#61DAFB"
+              className="mx-1"
             />
             ensures your visitors enjoy a fast, app-like experience that keeps
             them engaged.
           </p>
 
-          <p>
+          <p className="text-pretty">
             <BadgedLink
               href="https://laravel.com/"
               icon={SiLaravel}
               label="Laravel"
               itemProp="mentions"
               iconColor="#FF2D20"
+              className="mr-1"
             />
             provides the secure and robust backbone for your essential features,
             from online payments and booking calendars to client portals. Thanks
@@ -90,11 +92,12 @@ export default function MobileBody() {
               label="Inertia.js"
               itemProp="mentions"
               iconColor="#9553E9"
+              className="mx-1"
             />
             , every interaction feels instant and seamless.
           </p>
 
-          <p>
+          <p className="text-pretty">
             For design,{' '}
             <BadgedLink
               href="https://tailwindcss.com/"
@@ -102,6 +105,7 @@ export default function MobileBody() {
               label="Tailwind CSS"
               itemProp="mentions"
               iconColor="#06B6D4"
+              className="mx-1"
             />
             and{' '}
             <BadgedLink
@@ -111,12 +115,13 @@ export default function MobileBody() {
               itemProp="mentions"
               iconClassName="bg-black text-white p-0.5 rounded"
               iconColor="#FFFFFF"
+              className="mx-1"
             />{' '}
             deliver a polished, professional design that looks flawless on any
             device.
           </p>
 
-          <p>
+          <p className="text-pretty">
             This foundation is compiled with{' '}
             <BadgedLink
               href="https://vite.dev/"
@@ -124,18 +129,20 @@ export default function MobileBody() {
               label="Vite"
               itemProp="mentions"
               iconColor="#BD34FE"
+              className="mx-1"
             />
             to guarantee lightning-fast loading speeds that reduce bounce rates
             and improve your search engine rankings.
           </p>
 
-          <p>
+          <p className="text-pretty">
             Your site will be deployed on{' '}
             <BadgedLink
               href="https://aws.amazon.com/"
               label="AWS"
               itemProp="mentions"
-              icon={<span className="w-3 h-3 opacity-0" aria-hidden="true" />}
+              icon={<span className="w-4 h-4 opacity-0" aria-hidden="true" />}
+              className="mx-1"
             />
             and{' '}
             <BadgedLink
@@ -144,13 +151,14 @@ export default function MobileBody() {
               label="Alibaba Cloud"
               itemProp="mentions"
               iconColor="#FF6A00"
+              className="mx-1"
             />
             , giving you global reach with enterprise-grade reliability,
             automatic scaling for traffic spikes, and military-grade security to
             protect your business and customer data.
           </p>
 
-          <p>
+          <p className="text-pretty">
             The entire system is powered by enterprise-grade databases (
             <BadgedLink
               href="https://www.mysql.com/"
@@ -159,6 +167,7 @@ export default function MobileBody() {
               itemProp="mentions"
               iconClassName="bg-black text-white p-0.5 rounded"
               iconColor="#FFFFFF"
+              className="mx-1"
             />
             &{' '}
             <BadgedLink
@@ -167,6 +176,7 @@ export default function MobileBody() {
               label="MongoDB"
               itemProp="mentions"
               iconColor="#47A248"
+              className="mx-1"
             />
             ), giving you a reliable and scalable platform ready to grow with
             your business.

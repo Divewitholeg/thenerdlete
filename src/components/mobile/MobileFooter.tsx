@@ -17,7 +17,7 @@ export default function MobileFooter() {
       itemScope
       itemType="https://schema.org/WPFooter"
     >
-      {/* Contact Section */}
+      {/* Contact Section - Simple grid for mobile only */}
       <section
         id="footer-contact"
         className="grid grid-cols-3 gap-4 items-start justify-center text-center"
@@ -43,12 +43,6 @@ export default function MobileFooter() {
           </a>
         </div>
 
-        {/* Separator */}
-        <Separator
-          orientation="vertical"
-          className="mx-auto h-10 hidden sm:block"
-        />
-
         {/* Phone */}
         <div
           className="flex flex-col items-center space-y-1"
@@ -64,12 +58,6 @@ export default function MobileFooter() {
             Phone
           </a>
         </div>
-
-        {/* Separator (hidden on mobile) */}
-        <Separator
-          orientation="vertical"
-          className="mx-auto h-10 hidden sm:block"
-        />
 
         {/* WhatsApp */}
         <div

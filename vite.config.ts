@@ -25,5 +25,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    watch: {
+      // Ignore node_modules and other unnecessary directories
+      ignored: ['**/node_modules/**', '**/dist/**', '**/.git/**'],
+    },
   },
 });
